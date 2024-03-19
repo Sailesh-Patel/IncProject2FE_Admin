@@ -8,6 +8,9 @@ import BasketPage from './Components/Basket/BasketPage.jsx';
 import Logo from './Business.png';
 import React from 'react';
 import Login from './Components/Homepage/Login.jsx';
+import ItemEdit from './Components/Item/ItemEdit.jsx';
+import BasketEdit from './Components/Basket/BasketEdit.jsx';
+
 
 function App() {
   return (
@@ -36,7 +39,7 @@ function App() {
                 <Link className="nav-item nav-link active" to='/basket'>Basket</Link>
               </li>
               <li class="nav-item ">
-                <Link className="nav-item nav-link active" to='/createitems'>Add Items</Link>
+                <Link className="nav-item nav-link active" to='/createitems'>Admin Portal</Link>
               </li>
           </div>
           </div>
@@ -48,6 +51,8 @@ function App() {
           <Route path='/basket' element={<BasketPage />} />
           <Route path='/items' element={<PageForItem />} />
           <Route path='/createitems' element={<CreateItemPage/>} />
+          <Route path='/item/update/:id' element={<ItemEdit/>} />
+          <Route path='/basket/update/:id' element={<BasketEdit/>} />
         </Routes>
       </div>
 
