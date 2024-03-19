@@ -6,7 +6,7 @@ function BasketPage() {
   return (
     <div>
       <h1>Your Basket</h1>
-        <CreateBasket/>
+        {/* <CreateBasket/> */}
         <BasketDisplay />
     </div>
   );
