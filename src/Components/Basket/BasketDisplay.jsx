@@ -52,16 +52,16 @@ function BasketsDisplay() {
                     <div> 
                     Price: £{basketItem.price} 
                     </div>
-                    <div className="quantity">
+                    {/* <div className="quantity"> */}
                       
-                    <button onClick={() => setQuantity(quantity - 1)}  className="decrement" class="bi bi-dash-lg">-</button>
-          
-                   <div id="quantityChange" className="quantity">{quantity}</div>
+                    {/* <button onClick={() => setQuantity(quantity - 1)}  className="decrement" class="bi bi-dash-lg">-</button>
+           */}
+                   {/* <div id="quantityChange" className="quantity">{quantity}</div> */}
 
-                   <button onClick={() => setQuantity(quantity + 1)} className="increment" class="bi bi-plus-lg">+</button>
+                   {/* <button onClick={() => setQuantity(quantity + 1)} className="increment" class="bi bi-plus-lg">+</button> */}
 
                     {/* {basketItem.quantity} */}
-                    </div>
+                    {/* </div> */}
                   </div>
                 ))}
                 <br/>

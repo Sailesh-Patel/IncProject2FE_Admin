@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import ItemDisplay from "./ItemDisplay";
+import "./PageForItem.css";
 
 function PageForItem() {
   function getItems() {
