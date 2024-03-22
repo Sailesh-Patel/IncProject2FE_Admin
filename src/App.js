@@ -10,6 +10,7 @@ import React from 'react';
 import Login from './Components/Homepage/Login.jsx';
 import ItemEdit from './Components/Item/ItemEdit.jsx';
 import BasketEdit from './Components/Basket/BasketEdit.jsx';
+import CheckOut from './Components/Checkout/CheckOut.jsx';
 
 
 function App() {
@@ -41,6 +42,9 @@ function App() {
               <li class="nav-item ">
                 <Link className="nav-item nav-link active" to='/createitems'>Admin Portal</Link>
               </li>
+              <li class="nav-item ">
+                <Link className="nav-item nav-link active" to='/checkout'>Check Out</Link>
+              </li>
           </div>
           </div>
       </nav>
@@ -53,6 +57,7 @@ function App() {
           <Route path='/createitems' element={<CreateItemPage/>} />
           <Route path='/item/update/:id' element={<ItemEdit/>} />
           <Route path='/basket/update/:id' element={<BasketEdit/>} />
+          <Route path='/checkout' element={<CheckOut />} />
         </Routes>
       </div>
 

@@ -18,7 +18,9 @@ function PageForItem() {
 
   return (
     <div>
-      <h1>Groceries</h1>
+      <h1>
+        {/* Groceries */}
+        </h1>
       <div id="ItemDisplay">
         <ItemDisplay listItems={items} />
       </div>

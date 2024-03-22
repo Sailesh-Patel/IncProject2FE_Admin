@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./BasketDisplay.css";
+import { useNavigate } from "react-router-dom"
+import CheckOut from "../Checkout/CheckOut";
 
 function BasketsDisplay() {
+  const navigate = useNavigate();
   const [baskets, setBaskets] = useState([]);
   const [quantity, setQuantity] = useState(0);
 
@@ -70,6 +73,11 @@ function BasketsDisplay() {
               <p>Total Quantity:{calculateTotalQuantity(basket.items)}</p>
             </div>
           ))}
+          <div>
+  <button className="btn btn-primary"  onClick={() => {
+        navigate("/checkout");
+      }} >Checkout</button>
+</div>
         </div>
       </div>
     </div>
