@@ -5,8 +5,10 @@ import axios from "axios";
 function CreateItem() {
     const [name, setName] = useState("");
     const [price, setPrice] = useState();
-    const [image, setImage] = useState("")
-    const [quantity, setQuantity] = useState(0);
+    const [image, setImage] = useState("");
+    const [imageAlt, setImageAlt] = useState("");
+    const [quantity, setQuantity] = useState(1);
+    const [bulkSize, setBulkSize] = useState("");
     const navigate = useNavigate("");
 
 
@@ -14,13 +16,15 @@ function CreateItem() {
         <div className="card-group d-inline-flex padding">
             <form onSubmit={e => {
                 e.preventDefault()
-                axios.post("http://localhost:8088/item/create", { name, price, image, quantity })
+                axios.post("http://localhost:8088/item/create", { name, price, image, imageAlt, quantity, bulkSize })
                     .then(response => {
                         setName("");
                         setPrice();
                         setImage("");
+                        setImageAlt("");
                         setQuantity();
-                        navigate("/items");
+                        setBulkSize("");
+                        navigate("/");
                     })
                     .catch(err => console.error(err))
             }}>
@@ -41,11 +45,21 @@ function CreateItem() {
                             <input type="src" id="image" value={image} onChange={e => setImage(e.target.value)} required />
                         </div>
 
+
+                        <div className="col">
+                            <div label htmlfor="imageAlt" className="form-label ">Image Alt</div>
+                            <input type="src" id="imageAlt" value={imageAlt} onChange={e => setImageAlt(e.target.value)} required />
+                        </div>
+
                         <div className="col">
                             <div label htmlfor="quantity" className="form-label ">Quantity</div>
                             <input type="number" id="quantity" size="5"  min={0} value={quantity} onChange={e => setQuantity(e.target.value)} required />
                         </div>
 
+                        <div className="col">
+                            <div label htmlfor="bulkSize" className="form-label ">Bulk Size</div>
+                            <input type="text" id="bulkSize" size="20"  min={0} value={bulkSize} onChange={e => setBulkSize(e.target.value)} required />
+                        </div>
 
                     </div>
                 </div>

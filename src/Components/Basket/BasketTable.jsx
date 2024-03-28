@@ -40,7 +40,7 @@ function BasketTable(props) {
 
                             <th scope="col">Name</th>
                             <th scope="col">Update</th>
-                            {/* <th scope="col">Delete</th> */}
+                      
                         </tr>
                     </thead>
                     <tbody className="table-group-divider">
@@ -50,14 +50,7 @@ function BasketTable(props) {
                                 <tr>
                                     <td>{basket.name}</td>
                                     <td> <Link className="btn btn-primary" type="submit" to={`/Basket/update/${basket.id}`}>Update</Link> </td>
-                                    {/* <td><button type="button" className="btn btn-danger" onClick={() => {
-                                        axios.delete("http://localhost:8088/basket/delete/" + basket.id)
-                                            .then(res => {
-                                                getBaskets()
-                                            })
-                                            .catch(err => console.error(err));
-
-                                    }}>DELETE</button></td> */}
+        
                                 </tr>
                             ))
                         }
