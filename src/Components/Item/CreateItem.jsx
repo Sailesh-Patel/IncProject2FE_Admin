@@ -24,7 +24,7 @@ function CreateItem() {
                         setImageAlt("");
                         setQuantity();
                         setBulkSize("");
-                        navigate("/items");
+                        navigate("/");
                     })
                     .catch(err => console.error(err))
             }}>
